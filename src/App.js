@@ -1,12 +1,14 @@
 import './App.scss';
 import Posts from "./components/Posts/Posts";
+import 'bootstrap';
+import 'bootstrap/scss/bootstrap.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <Posts />
-      </header>
+        <div className="container">
+            <Posts />
+        </div>
     </div>
   );
 }
