@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import "./Posts.scss"
+import "./Posts.scss";
 import Post from "../Post/Post";
 import axios from "axios";
 
 class Posts extends Component {
-    postsEndpoint = "//localhost/wp-json/wp/v2/posts";
+    postsEndpoint = "//fwolfeil.bitlampsites.com/wpd/sandbox/wp-json/wp/v2/posts";
     // this class component we are extending gives us "state" and "setState()"
     state = {
         posts: [],
