@@ -1,11 +1,19 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import './Book.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Card} from "react-bootstrap";
 
 const Book = (props) => (
     <div className="Book">
-        <h2>{props.title}</h2>
-        <p dangerouslySetInnerHTML={{__html: props.body}}/>
+        <Card style={{ width: '25rem' }}>
+            <Card.Body>
+                <Card.Title>{props.title}</Card.Title>
+                <Card.Text>
+                    <p dangerouslySetInnerHTML={{__html: props.body}}/>
+                </Card.Text>
+            </Card.Body>
+        </Card>
     </div>
 );
 
