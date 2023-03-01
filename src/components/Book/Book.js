@@ -11,10 +11,12 @@ const Book = (props) => (
 
 Book.propTypes = {
     "title": PropTypes.string,
+    "body": PropTypes.string,
 }
 
 Book.defaultProps = {
-    "title": "Book Title"
+    "title": "Book Title",
+    "body": "Book body"
 };
 
 export default Book;

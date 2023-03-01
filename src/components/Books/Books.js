@@ -4,7 +4,7 @@ import Book from "../Book/Book";
 import axios from "axios";
 
 class Books extends Component {
-    booksEndpoint = "//fwolfeil.bitlampsites.com/wpd/new-final/wp-json/wp/v2/books"
+    booksEndpoint = "//fwolfeil.bitlampsites.com/wpd/new-final/wp-json/wp/v2/book";
 
     state = {
         books: [],
@@ -18,7 +18,7 @@ class Books extends Component {
                 console.log('API Response', response);
 
                 this.setState( {
-                    posts: response.data,
+                    books: response.data,
                     isLoaded: true,
                 });
             })
@@ -31,9 +31,11 @@ class Books extends Component {
         return (
             <div className="Books">
                 {this.state.isLoaded ? '' : <p>Loading...</p>}
-                {this.state.books.map( post =>
+                {this.state.books.map( book =>
                     <Book
-
+                        title={book.title.rendered}
+                        body={book.content.rendered}
+                        key={book.id}
                     />
                 )}
             </div>
