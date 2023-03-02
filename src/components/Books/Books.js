@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./Books.scss";
 import Book from "../Book/Book";
 import axios from "axios";
+import {Col, Row} from "react-bootstrap";
 
 class Books extends Component {
     booksEndpoint = "//fwolfeil.bitlampsites.com/wpd/new-final/wp-json/wp/v2/book";
@@ -31,13 +32,18 @@ class Books extends Component {
         return (
             <div className="Books">
                 {this.state.isLoaded ? '' : <p>Loading...</p>}
-                {this.state.books.map( book =>
-                    <Book
-                        title={book.title.rendered}
-                        body={book.content.rendered}
-                        key={book.id}
-                    />
-                )}
+                <Row>
+                    {this.state.books.map( book =>
+                        <Col>
+                            <Book
+                                title={book.title.rendered}
+                                body={book.content.rendered}
+                                key={book.id}
+                            />
+                        </Col>
+
+                    )}
+                </Row>
             </div>
         );
     }

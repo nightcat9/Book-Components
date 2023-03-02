@@ -3,7 +3,7 @@ import Posts from "./components/Posts/Posts";
 import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import Books from "./components/Books/Books";
-import {CardGroup, Row} from "react-bootstrap";
+import {CardGroup} from "react-bootstrap";
 
 function App() {
   return (
@@ -11,9 +11,7 @@ function App() {
         <div className="container fluid">
             <Posts />
             <CardGroup>
-                <Row>
-                    <Books />
-                </Row>
+                <Books />
             </CardGroup>
 
         </div>

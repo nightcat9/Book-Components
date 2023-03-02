@@ -6,7 +6,7 @@ import {Card} from "react-bootstrap";
 
 const Book = (props) => (
     <div className="Book">
-        <Card style={{ width: '25rem' }}>
+        <Card style={{ width: '25rem' }} className="book-card">
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Text>
